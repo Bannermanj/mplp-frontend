@@ -1,0 +1,66 @@
+$breakpoint-phone: 500px;
+$breakpoint-tablet: 800px;
+$breakpoint-sm-desktop: 992px;
+$breakpoint-lg-desktop: 1200px;
+
+@media (max-width: $breakpoint-sm-desktop) {
+  .login__container-inner {
+   h1 {
+     width: 70% !important;
+     text-align: center;
+   }
+  }
+
+}
+.login__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .login__container-inner {
+    margin-top: 7%;
+    background-color: #fff;
+    border-radius: 25px;
+    color:#FFF;
+    min-width: 450px;
+    max-width: 470px;
+    min-height: 550px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: #FF9F43;
+    }
+    .btn-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .login-btn {
+        background-color: #1c9854;
+        border: solid 2px #fff;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #fff;
+        height: 50px;
+        width: 75%;
+        margin-bottom: 1%;
+      }
+      .register-btn {
+        background-color: #0a497b;
+        border: solid 2px #fff;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #fff;
+        height: 50px;
+        width: 75%;
+        margin-bottom: 1%;
+      }
+    }
+  }
+}

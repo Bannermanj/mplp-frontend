@@ -1,0 +1,243 @@
+$breakpoint-phone: 500px;
+$breakpoint-tablet: 800px;
+$breakpoint-sm-desktop: 992px;
+$breakpoint-lg-desktop: 1200px;
+
+@media (max-width: $breakpoint-sm-desktop) {
+  .prediction__container {
+    height: 100vh !important;
+    overflow: auto;
+  }
+  .prediction__column-user-table {
+    width: 75% !important;
+    overflow: scroll;
+
+    .prediction__column-row-user {
+      cursor: pointer;
+      display: flex;
+      width: 100%;
+      height: 100px !important;
+      background: #262C49;
+      margin-top: 10px !important;
+      margin-bottom: 10px;
+      flex-direction: row;
+      color: #fff;
+      align-items: center;
+      box-shadow: 0 2px 5px 0 #282828;
+    }
+  }
+
+  .prediction__reset-row {
+    height: 10% !important;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .prediction__column-league-table {
+    width: 25% !important;
+
+    .selected {
+      background-color: #FF9F43 !important;
+      width: 62px !important;
+      height: 62px !important;
+      border-radius: 50% !important;
+    }
+
+    h2 {
+      display: none;
+    }
+
+    .prediction__column-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 62px !important;
+      height: 100px !important;
+      background-color: transparent !important;
+      box-shadow: 0 0px 0px 0 #282828 !important;
+
+      img {
+        margin-right: 0px !important;
+        height: 55px;
+      }
+
+      h3 {
+        display: none;
+      }
+    }
+  }
+}
+
+.prediction__container {
+  background-color: #262C49;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .prediction__reset-row {
+    background: rgba(#FF9F43, .7);
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    .submit-btn {
+      background-color: #1c9854;
+      color: #fff;
+      font-size: 20px;
+      padding: 5px 15px;
+      border-radius: 5px;
+      height: 50px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border: 2px solid #fff;
+    }
+
+    .reset-btn {
+      background-color: #CC0000;
+      color: #fff;
+      font-size: 20px;
+      padding: 5px 15px;
+      border-radius: 5px;
+      height: 50px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border: 2px solid #fff;
+    }
+  }
+
+  .prediction__row {
+    display: flex;
+    width: 100%;
+
+    .prediction__column-user-table {
+      background-color: #194089;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-left: 10px solid #FF9F43;
+
+      .prediction__column-row-user {
+        cursor: pointer;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background: #262C49;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        flex-direction: row;
+        color: #fff;
+        align-items: center;
+        box-shadow: 0 2px 5px 0 #282828;
+
+        h2 {
+          margin-left: 7%;
+          margin-right: 10px;
+        }
+
+        .prediction__position {
+          margin-right: 25px;
+          margin-left: 10%;
+        }
+
+        .prediction__column-row-inner {
+          display: flex;
+          height: 100%;
+
+          h3 {
+            display: flex;
+            align-self: center;
+          }
+
+          img {
+            margin-right: 10px;
+            height: 60%;
+            display: flex;
+            align-self: center;
+          }
+        }
+      }
+    }
+
+    .prediction__column-league-table {
+      background-color: #194089;
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        color: #fff;
+      }
+
+      .selected {
+        background-color: #FF9F43 !important;
+        border-radius: 15px;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          margin-right: 25px;
+          margin-left: 0px !important;
+        }
+      }
+
+      .prediction__column-row {
+        cursor: pointer;
+        display: flex;
+        width: 65%;
+        height: 50px;
+        background-color: #1c9854;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px 0 #282828;
+        border-radius: 10px;
+
+        img {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .champion {
+    background-color: #d4af37 !important;
+  }
+
+  .championsleague {
+    background-color: #4285F4 !important;
+  }
+
+  .europaleague {
+    background-color: #FA7B17 !important;
+  }
+
+  .europaconfleague {
+      background-color: #32CD32 !important;
+  }
+
+  .relegation {
+    background-color: #EA4335 !important;
+  }
+
+}
