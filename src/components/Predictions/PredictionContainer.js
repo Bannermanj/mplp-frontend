@@ -15,7 +15,7 @@ const PredictionContainer = props => {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:3001/api/predictions/${match.params.id}`
+        `http://ec2-18-232-101-239.compute-1.amazonaws.com:3001/api/predictions/${match.params.id}`
       )
       .then(function (response) {
         if (response.data.prediction.length > 0) {
@@ -56,7 +56,7 @@ const PredictionContainer = props => {
     event.preventDefault();
     axios
       .post(
-        "http://localhost:3001/api/predictions",
+        "http://ec2-18-232-101-239.compute-1.amazonaws.com:3001/api/predictions",
         {
           userPositions,
           uuid: match.params.id,

@@ -52,13 +52,12 @@ const Login = props => {
 
   const classes = useStyles();
   const handleLogin = () => {
-    // "http://ec2-18-232-101-239.compute-1.amazonaws.com:3000/api/login",
     setIsNewUser(false);
     setError(null);
     if (password && username) {
       axios
         .post(
-          "http://localhost:3001/api/login",
+          "http://ec2-18-232-101-239.compute-1.amazonaws.com:3001/api/login",
           {
             username,
             password,
@@ -91,7 +90,7 @@ const Login = props => {
     setError(null);
 
     if (!phoneMatch) {
-        setError('Invalid phone number: format (000-000-0000)')
+        setError('Invalid phone number: format (123-456-9999)')
     }
     if (!username) {
       setError('Username cannot be blank');
@@ -105,7 +104,7 @@ const Login = props => {
     if (username && password && password === confirmPassword && phoneMatch) {
       axios
       .post(
-        "http://localhost:3001/api/login/new",
+        "http://ec2-18-232-101-239.compute-1.amazonaws.com:3001/api/login/new",
         {
           username,
           password,
